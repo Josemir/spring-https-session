@@ -12,7 +12,9 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+/**
+	FONTE: https://deviniciative.wordpress.com/2020/12/21/hands-on-gerenciamento-de-sessao-com-spring-boot/
+*/
 @Controller
 public class SessionControllerTest {
 	

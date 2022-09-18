@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Brincando com gerenciamento de sessão</title>
+</head>
+<body>
+<div>
+    <form method="post" th:action="@{/salvar/nota}">
+        <label>
+            <textarea cols="40" name="nota" placeholder="Entre com algumas notas. . . ." rows="2"></textarea>
+        </label>
+        <br><input type="submit" value="Salvar Nota"/>
+    </form>
+</div>
+<div>
+    <br>
+    <form method="post" th:action="@{/destruir/sessao}">
+        <input type="submit" value="Destruir Sessao"/>
+    </form>
+</div>
+<div>
+    <h2>Notas</h2>
+    <ul th:each="sessionNotes : ${sessionNotes}">
+        <li th:text="${sessionNotes}"></li>
+    </ul>
+</div>
+</body>
+</html>
